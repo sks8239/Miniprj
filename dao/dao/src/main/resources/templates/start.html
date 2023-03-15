@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>시작 화면</title>
+	<style>
+		.back {
+			background-image: url("/images/start_back.jpg");
+			text-align: center;
+			 height: 100%;
+	        padding: 0px;
+	        margin: 0px;
+		}
+		
+
+	 footer {
+	    position: absolute;
+	    left: 0;
+	    bottom: 0;
+	    width: 100%;
+	    height: 150px;
+	    background-color:rgba(0, 0, 0, 0.6);
+		}
+	.font{
+		font-size: 60px;
+		font-weight: bolder;
+
+	}
+	.button{
+		background-color:rgba(0, 0, 0, 0.0);
+		border: 0;
+		width: 200px;
+		float: bottom;
+
+	}
+	</style>
+</head>
+<body class="back">
+	<br>
+	<img src="/images/start_icon.png" height=70px>
+	<br><br>
+	<h1><font class="font">
+		<span th:text="${currentID}">id</span>
+		<span>님 환영합니다.</span><br>
+
+	</font> <br><br><span th:text="${nocham}">id</span><br><br>
+
+		<form action = "/game" accept-charset="utf-8" name = "user_login" method="get">
+			<input class="button" type="image" name="start_game" src="/images/start_game.png">
+		</form>
+		<form action = "/shop" accept-charset="utf-8" name = "user_login" method="get">
+			<input class="button" type="image" name="start_shot" src="/images/start_shop.png"></form>
+		<form action = "/" accept-charset="utf-8" name = "user_login" method="get">
+			<input class="button" type="image" name="start_logout" src="/images/start_logout.png"></form>
+
+
+
+</body>
+</html>

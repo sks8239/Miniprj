@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>시작 화면</title>
+	<style>
+		.back {
+			background-image: url("/images/start_back.jpg");
+			text-align: center;
+			 height: 100%;
+	        padding: 0px;
+	        margin: 0px;
+		}
+		
+
+	 footer {
+	    position: absolute;
+	    left: 0;
+	    bottom: 0;
+	    width: 100%;
+	    height: 150px;
+	    background-color:rgba(0, 0, 0, 0.6);
+		}
+	.font{
+		font-size: 60px;
+		font-weight: bolder;
+
+	}
+	.button{
+		background-color:rgba(0, 0, 0, 0.0);
+		border: 0;
+		width: 200px;
+		float: bottom;
+
+	}
+	</style>
+</head>
+<body class="back">
+	<br>
+	<img src="/images/start_icon.png" height=70px>
+	<br><br>
+	<h1><font class="font">
+		상점에 오신것을 환영합니다.
+	</font> </h1><br><br><br>
+	<form action = "/shop/shop_cham" accept-charset="utf-8" name = "user_login" method="get">
+		<input class="button" type="image" name="shop_cham" src="/images/shop_cham.png">
+	</form>
+	<form action = "/shop/shop_skin" accept-charset="utf-8" name = "user_login" method="get">
+	<input class="button" type="image" name="shop_skin" src="/images/shop_skin.png">
+	</form>
+	<form action = "/shop/logout" accept-charset="utf-8" name = "user_login" method="post">
+	<input class="button" type="image" name="shop_logout" src="/images/start_logout.png">
+	</form>
+    <footer></footer>
+
+
+
+</body>
+</html>

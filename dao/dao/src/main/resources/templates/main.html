@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>메인 html</title>
+    <style>
+        div.main{
+            height: 500px;
+            left: 100%;
+        }
+        div.left{
+            width: 25%;
+            float: left;
+            text-align: center;
+            background-color: #f9f9f9;
+            height: 100vh;
+        }
+        div.right{
+            width: 75%;
+            height: 100vh;
+            float : right;
+            background-image: url("/images/main_back.png");
+            background-size: cover;
+            background-position: center;
+        }
+        .css{
+            width: 250px;
+            height: 40px;
+            background-color: #ededed;
+            border:none;
+            margin: 10px;
+            font-size: 5px;
+            font-weight: bolder;
+
+
+        }
+        .riot{
+            width: 200px;
+        }
+        .sign{
+            border: 0;
+            background-color: #f9f9f9;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="left">
+        <div>
+            <img class="riot" src="/images/main_ico.png">
+            <form action = "/login" accept-charset="utf-8" name = "user_login" method="post">
+                    <h2>로그인</h2> <br><br> <input class="css" type="text" placeholder=" 아이디" name="id">
+                    <br> <input class="css" type="password" name="password" placeholder=" 비밀번호"><br><br>
+            <input class="login" type="image" name="login" src="/images/main_login.png"> <br><br></form>
+
+            <form action = "/sign" accept-charset="utf-8" name = "user_login" method="post">
+                <input class="sign" type="submit" name = "sign" value="로그인이 안되시나요? 계정 생성"></form>
+
+
+        </div>
+    </div>
+    <div class="right">
+    </div>
+
+</div>
+
+
+</body>
+</html>

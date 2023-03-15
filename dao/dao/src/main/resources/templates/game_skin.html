@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>게임 스킨화면</title>
+  <style>
+    .back {
+      background-image: url("/images/game_skin.png");
+      background-size: cover;
+      text-align: center;
+       height: 100%;
+          padding: 0px;
+          margin: 0px;
+    }
+    
+
+   footer {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 150px;
+      background-color:rgba(0, 0, 0, 0.6);
+    }
+  .font{
+    font-size: 30px;
+    font-weight: bolder;
+    color: black;
+
+  }
+  .button{
+    background-color:rgba(0, 0, 0, 0.0);
+    border: 0;
+    width: 200px;
+    float: bottom;
+
+  }
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow:auto;
+  height: 500px;
+}
+
+table {
+  width: 800px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+  padding: 15px;
+  background-color:black;
+  color: white;
+}
+
+th {
+  text-align: left;
+  background-color: black;
+}
+.text {
+    width: 500px;
+      height: 40px;
+      background-color: white;
+      border:none;
+      margin: 10px;
+      font-size: 5px;
+      font-weight: bolder;
+      tex
+}
+.next {
+  width: 45px;
+  height: 45px;
+  margin: 20ox;
+}
+
+  
+  </style>
+</head>
+<body class="back">
+  <br>
+  <br><br>
+  </font> <br><br><br>
+  <div class="container">
+  <table>
+    <thead>
+    <tr>
+        <th><center>챔피언 이름</center></th>
+        <th><center>스킨 이름</center></th>
+        <th><center>스킨 가격</center></th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="user : ${list2}">
+        <td th:text="${user.chp_name}"></td>
+        <td th:text="${user.sk_name}"></td>
+        <td th:text="${user.sk_price}"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    <footer>
+      <br>
+      <form action = "/game/skinSel" accept-charset="utf-8" name = "user_login" method="get">
+      <input class="text" type="text" name="skininput"placeholder=" 스킨 이름을 입력해주세요."><br>
+        <input class="next"type="image" src="/images/game_next.png" ></form>
+    </footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>상점 챔피언 화면</title>
+  <style>
+    .back {
+      background-image: url("/images/game_back.jpg");
+      background-size: cover;
+      text-align: center;
+       height: 100%;
+          padding: 0px;
+          margin: 0px;
+    }
+    
+
+   footer {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 150px;
+      background-color:rgba(0, 0, 0, 0.6);
+    }
+  .font{
+    font-size: 30px;
+    font-weight: bolder;
+    color: black;
+
+  }
+  .button{
+    background-color:rgba(0, 0, 0, 0.0);
+    border: 0;
+    width: 200px;
+    float: bottom;
+
+  }
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow:auto;
+  height: 500px;
+}
+
+table {
+  width: 800px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+  padding: 15px;
+  background-color:black;
+  color: white;
+}
+
+th {
+  text-align: left;
+  background-color: black;
+}
+.text {
+    width: 500px;
+      height: 40px;
+      background-color: white;
+      border:none;
+      margin: 10px;
+      font-size: 5px;
+      font-weight: bolder;
+      tex
+}
+.next {
+  width: 45px;
+  height: 45px;
+  margin: 20ox;
+}
+
+  
+  </style>
+</head>
+<body class="back">
+  <br>
+  <h1>챔피언 상점 </h1>
+  <br><br>
+  </font> <br><br><br>
+  <div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>챔피언 이름</th>
+        <th>챔피언 가격</th>
+        <th>포지션</th>
+        <th>라인</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr th:each="cham : ${shop_cham}">
+        <td th:text="${cham.chp_name}"></td>
+        <td th:text="${cham.chp_price}"></td>
+        <td th:text="${cham.position}"></td>
+        <td th:text="${cham.lane}"></td>
+
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+    <footer>
+      <br>
+      <form action = "/shop/shop_buycham" accept-charset="utf-8" name = "user_login" method="get">
+      <input class="text" type="text" name="chaminput" placeholder=" 챔피언 이름을 입력해주세요."><br>
+      <input class="next"type="image" src="/images/game_next.png" >
+      </form>
+    </footer>
+
+
+
+</body>
+</html>
